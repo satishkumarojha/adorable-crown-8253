@@ -1,13 +1,11 @@
 import './App.css'
-import Footer from './components/Footer/Footer'
-import Teams from './pages/Teams'
+import UserDashboard from './pages/UserDashboard'
 
 function App() {
 
   return (
     <div className="App">
-      {/* <Teams /> */}
-       <Footer />
+{/* <UserDashboard/> */}
     </div>
   )
 }
