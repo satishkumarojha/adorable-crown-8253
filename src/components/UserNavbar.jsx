@@ -31,7 +31,7 @@ import {Link} from 'react-router-dom'
 
 
 
-export default function Navbar() {
+export default function UserNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
