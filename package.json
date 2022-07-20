@@ -8,9 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.2.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-redux": "^8.0.2"
+    "react-redux": "^8.0.2",
+    "react-video-js-player": "^1.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
