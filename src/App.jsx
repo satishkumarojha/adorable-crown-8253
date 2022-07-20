@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import { Navbar } from './components/Navbar'
+import './App.css'
+import { Navbar} from './components/Navbar/Navbar'
+import UserDashboard from './pages/UserDashboard'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Navbar/>
+{/* <UserDashboard/> */}
+<Navbar/>
     </div>
   )
 }
