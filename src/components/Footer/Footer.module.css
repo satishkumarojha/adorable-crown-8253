@@ -56,11 +56,14 @@
 .RightFooter > div{
     text-align: left;
     font-weight: lighter;
-    /* border:2px solid brown; */
 }
 .RightFooter > div > h3{
   color: #0b3558;
 }
-.RightFooter p:hover{
-   text-decoration: "underline";
+.RightFooter > div > a{
+    color: grey;
+    text-decoration: none;
+}
+.RightFooter > div> a > p:hover{
+    text-decoration: underline;
 }

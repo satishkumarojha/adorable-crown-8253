@@ -50,41 +50,41 @@ const Footer = () => {
         <div className={styles.RightFooter}>
             <div>
                 <h3>About</h3>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}} ><p>About Calendly</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Contact Sales</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Newsrooms</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Careers</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Security</p></Link>
+                <Link to="#"><p>About Calendly</p></Link>
+                <Link to="#"><p>Contact Sales</p></Link>
+                <Link to="#"><p>Newsrooms</p></Link>
+                <Link to="#"><p>Careers</p></Link>
+                <Link to="#"><p>Security</p></Link>
             </div>
             <div>
             <h3>Solutions</h3>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Customer Success</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Sales</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Recruiting</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Information Technology</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Marketing</p></Link>   
+                <Link to="#"><p>Customer Success</p></Link>
+                <Link to="#"><p>Sales</p></Link>
+                <Link to="#"><p>Recruiting</p></Link>
+                <Link to="#"><p>Information Technology</p></Link>
+                <Link to="#"><p>Marketing</p></Link>   
             </div>
             <div>
             <h3>Popular Features</h3>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Embeded Calendly</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Availability</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Sending Notifications</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Using Calendly Mobile</p></Link>   
+                <Link to="#"><p>Embeded Calendly</p></Link>
+                <Link to="#"><p>Availability</p></Link>
+                <Link to="#"><p>Sending Notifications</p></Link>
+                <Link to="#"><p>Using Calendly Mobile</p></Link>   
             </div>
             <div>
             <h3>Support</h3>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Help Center</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Video Tutorials</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Cookie Settings</p></Link>    
+                <Link to="#"><p>Help Center</p></Link>
+                <Link to="#"><p>Video Tutorials</p></Link>
+                <Link to="#"><p>Cookie Settings</p></Link>    
             </div>
             <div>
             <h3>Add-Ons</h3>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Download for Chrome</p></Link>
-                <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Download for Firefox</p></Link>    
+                <Link to="#"><p>Download for Chrome</p></Link>
+                <Link to="#"><p>Download for Firefox</p></Link>    
             </div>
             <div>
             <h3>Developers</h3>
-            <Link to="#" style={{color:"grey", textDecoration:"none"}}><p>Developer Tools</p></Link>
+            <Link to="#"><p>Developer Tools</p></Link>
             </div>
         </div>
     </div>
