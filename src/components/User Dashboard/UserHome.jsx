@@ -1,5 +1,5 @@
 import React from "react";
-import UserRoutes from "../pages/UserRoutes";
+import UserRoutes from "./../../pages/UserRoutes";
 import Dashboard from "./Dashboard";
 
 

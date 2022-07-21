@@ -23,7 +23,7 @@ import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 
 export default function Dashboard() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+ 
 
   return (
     <>
