@@ -62,7 +62,7 @@ export default function Dashboard() {
 
               <Link to={'/'} >
               <Button bg={"none"} fontWeight={"semibold"}>
-              Event Types
+               Event Types
                 </Button>
                
               </Link>
@@ -86,6 +86,7 @@ export default function Dashboard() {
             </HStack>
           </VStack>
           <Flex alignItems={"center"}>
+            <Link to="/createtype">
             <Button
               variant={"solid"}
               bg={"#3372cc"}
@@ -94,9 +95,11 @@ export default function Dashboard() {
               mr={4}
               leftIcon={<AddIcon />}
               borderRadius={50}
+              onClick
             >
               Create
             </Button>
+            </Link>
            
           </Flex>
         </Flex>
