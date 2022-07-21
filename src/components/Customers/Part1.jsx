@@ -12,9 +12,11 @@ import {
 
 const Part1 = () => {
     return (
-        <>
+        < >
+        <Center >
             <Container
-                // bg='blue.500'
+            w={"full"}
+                // bg='blue.100'
                 height={["90vh", "140vh", "90vh"]} maxWidth={['container.sl', 'container.xl', 'container.xl']} p={[0, 5, 10]}>
                 <Flex
                     // bg='green.100'
@@ -45,7 +47,7 @@ const Part1 = () => {
                     </Box>
                 </Flex>
             </Container>
-
+            </Center>
 
             <Container
                 // bg='blue.600'
@@ -64,7 +66,9 @@ const Part1 = () => {
                         }}
                     >
 
-                        <SimpleGrid bg={"green"} maxW={'400px'} h={"480"} columns={1} >
+                        <SimpleGrid 
+                        // bg={"green"}
+                         maxW={'400px'} h={"480"} columns={1} >
                             <Center >
                                 <Box
                                     maxW={'300px'}
@@ -115,7 +119,9 @@ const Part1 = () => {
                         <Spacer ></Spacer>
 
 
-                        <SimpleGrid bg={"green"} maxW={'400px'} h={"480"} columns={1} >
+                        <SimpleGrid 
+                        // bg={"green"}
+                         maxW={'400px'} h={"480"} columns={1} >
                             <Center >
                                 <Box
                                     maxW={'300px'}
@@ -165,7 +171,9 @@ const Part1 = () => {
                         </SimpleGrid>
                         <Spacer ></Spacer>
 
-                        <SimpleGrid bg={"green"} maxW={'400px'} h={"480"}  columns={1} >
+                        <SimpleGrid
+                        //  bg={"green"} 
+                        maxW={'400px'} h={"480"}  columns={1} >
                             <Center >
                                 <Box
                                     maxW={'300px'}
@@ -190,7 +198,7 @@ const Part1 = () => {
 
                                     <Box p={6}>
                                         <Stack spacing={0} mb={5}>
-                                            <Heading fontSize={'3xl'} fontWeight={800} fontFamily={'body'}>
+                                            <Heading fontSize={['2xl','xl','3xl']} fontWeight={800} fontFamily={'body'}>
                                                 How Vonage's customers sucess team increases efficiency  with calendly
                                             </Heading>
                                         </Stack>
