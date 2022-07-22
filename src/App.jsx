@@ -1,13 +1,19 @@
 import './App.css'
 import { Navbar} from './components/Navbar/Navbar'
-import CreateEvent from './pages/CreateEvent'
+ 
+import {Home} from './pages/Home'
+import  Login  from './pages/Login'
+import Password from './pages/Password'
 import UserDashboard from './pages/UserDashboard'
 function App() {
 
   return (
     <div className="App">
 {/* <UserDashboard/> */}
-<Navbar/>
+   <Navbar/>
+   {/* <Home/> */}
+   {/* <Login/> */}
+   {/* <Password/> */}
     </div>
   )
 }
