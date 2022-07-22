@@ -13,7 +13,6 @@ const UserDashboard = () => {
         <Dashboard/>
         <UserRoutes/>
     {/* <UserNavRoutes/> */}
-    {/* <EventForm /> */}
     </div>
   )
 }
