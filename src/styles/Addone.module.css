@@ -1,0 +1,23 @@
+.divfirstinside {
+    border: 1px solid black;
+    width: 60%;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 5%;
+}
+.backbtn {
+    border: 1px solid #006bff;
+    color: #006bff;
+    border-radius: 25px;
+    background-color: #e8f1fe;
+}
+.firstP {
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+.maindiv{
+   border:1px solid red;
+   height: 100vh;    
+   width: 60%;
+   margin: auto;
+}
