@@ -58,6 +58,7 @@
 }
 
 .h1btn2 {
+  text-align: center;
   width: 100%;
   height: 300px;
   /* background-color: rgb(204, 206, 209); */
@@ -120,8 +121,12 @@ video:focus {
   font-size: xxx-large;
   font-weight: 800;
 }
+.div7{
+  text-align: center;
+}
 
 .divgrid {
+  text-align: center;
   margin-top: 3%;
 }
 .Image1 {
