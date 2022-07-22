@@ -10,10 +10,10 @@ const UserDashboard = () => {
   return (
     <div>
         <Navbar/>
-        {/* <Dashboard/> */}
-        {/* <UserRoutes/> */}
+        <Dashboard/>
+        <UserRoutes/>
     {/* <UserNavRoutes/> */}
-    <EventForm />
+    {/* <EventForm /> */}
     </div>
   )
 }
