@@ -1,5 +1,6 @@
 import './App.css'
 import { Navbar} from './components/Navbar/Navbar'
+ 
 import {Home} from './pages/Home'
 import  Login  from './pages/Login'
 import Password from './pages/Password'
