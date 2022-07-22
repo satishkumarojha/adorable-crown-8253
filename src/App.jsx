@@ -1,14 +1,17 @@
 import './App.css'
+import Calendar_ui from './components/Calendar/Calendar_ui'
 import { Navbar} from './components/Navbar/Navbar'
-import UserDashboard from './pages/UserDashboard'
 import Customers from './pages/Customers'
+import UserDashboard from './pages/UserDashboard'
+
 function App() {
 
   return (
     <div className="App">
-{/* <UserDashboard/> */}
-<Navbar/>
-<Customers/>
+{/* <Navbar/> */}
+<UserDashboard/>
+{/* <Customers/> */}
+
     </div>
   )
 }

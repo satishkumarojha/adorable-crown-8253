@@ -6,9 +6,8 @@ const UserNavRoutes = () => {
   return (
     <div>
         <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/avaliablity' element={<Availablity/>}/>
-
+            {/* <Route path='/' element={<Home/>}/> */}
+            {/* <Route path='/availablity' element={<Availablity/>}/> */}
         </Routes>
     </div>
   )
