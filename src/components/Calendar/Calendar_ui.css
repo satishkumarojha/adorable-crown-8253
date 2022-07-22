@@ -1,0 +1,32 @@
+.sch-title {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+  }
+  .calendar-body{
+    /* background-color: black;
+    width: 1000px;
+    height: auto; */
+    padding-top: 50px;
+  }
+  .tree-title {
+    display: inline-block;
+    width: 20%;
+    padding-left: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .sch-component {
+    float: left;
+    width: 75%;
+  }
+  
+  .tree-component {
+    float: right;
+    width: 20%;
+  }
+  .flex{
+    display:flex
+  }
