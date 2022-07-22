@@ -2,6 +2,7 @@ import './App.css'
 import { Navbar} from './components/Navbar/Navbar'
 import {Home} from './pages/Home'
 import  Login  from './pages/Login'
+import Password from './pages/Password'
 import UserDashboard from './pages/UserDashboard'
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
 {/* <UserDashboard/> */}
    <Navbar/>
    {/* <Home/> */}
-   <Login/>
+   {/* <Login/> */}
+   {/* <Password/> */}
     </div>
   )
 }
