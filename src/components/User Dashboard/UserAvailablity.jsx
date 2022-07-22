@@ -1,8 +1,9 @@
 import React from 'react'
+import Calendar_ui from './Calendar/Calendar_ui'
 
 const Availablity = () => {
   return (
-    <div>Availablity</div>
+    <Calendar_ui/>
   )
 }
 
