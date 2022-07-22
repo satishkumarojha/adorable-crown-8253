@@ -11,7 +11,7 @@ const UserDashboard = () => {
         <Navbar/>
         <Dashboard/>
         <UserRoutes/>
-    {/* <UserNavRoutes/> */}
+    <UserNavRoutes/>
     </div>
   )
 }

@@ -1,0 +1,69 @@
+.warpper {
+  width: 70%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.card {
+  background-color: #fff;
+}
+.imgone {
+  height: 200px;
+}
+.imgone > img {
+  border: 1ps solid 
+  #006bff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.content {
+  margin-left: 5%;
+
+  text-align: left;
+}
+.cardH {
+  font-size: 22px;
+  font-weight: 600;
+}
+.cardP {
+  font-size: 18px;
+  padding-top: 20px;
+}
+.cardA {
+  margin-top: 50px;
+  font-size: 20px;
+  color: 
+  #006bff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* for mobilescreen */
+@media screen and (min-width: 200px) and (max-width: 640px) {     
+  .warpper {
+    width: 100%;
+    /* margin: 5% auto; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .imgone {
+    height: 350px;
+  }
+}
+
+
+/* for Tab screen */
+@media screen and (min-width: 640px) and (max-width: 1000px) {
+  .warpper {
+    width: 100%;
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .imgone {
+    height: 300px;
+  }
+}

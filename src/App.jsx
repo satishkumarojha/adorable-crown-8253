@@ -2,7 +2,6 @@ import './App.css'
 import { Navbar} from './components/Navbar/Navbar'
 import {Home} from './pages/Home'
 import UserDashboard from './pages/UserDashboard'
-
 function App() {
 
   return (
