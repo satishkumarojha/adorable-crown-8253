@@ -7,16 +7,18 @@ import {Home} from './pages/Home'
 import  Login  from './pages/Login'
 import Password from './pages/Password'
 import UserDashboard from './pages/UserDashboard'
+import Footer from './components/Footer/Footer';
 function App() {
 
   return (
     <div className="App">
 {/* <UserDashboard/> */}
-   {/* <Navbar/> */}
-   {/* <Home/> */}
+   <Navbar/>
+   <Home/>
+   <Footer/>
    {/* <Login/> */}
    {/* <Password/> */}
-   <Calendar2/>
+   {/* <Calendar2/> */}
     </div>
   )
 }

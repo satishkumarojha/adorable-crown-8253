@@ -10,4 +10,4 @@ const Availablity = () => {
   )
 }
 
-export default Availablity
+export default Availablity;
