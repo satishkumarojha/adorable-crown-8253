@@ -50,7 +50,7 @@ export const Navbar = () => {
           <ModalHeader textAlign={'center'}>Get started today</ModalHeader>
           <ModalCloseButton onClick={onClose}/>
           <ModalBody>
-           <SignupBox loginWithGoogle={loginWithGoogle}/>
+           <SignupBox loginWithGoogle={loginWithGoogle} log={"Sign up"}/>
           </ModalBody>
         </ModalContent>
       </Modal>
