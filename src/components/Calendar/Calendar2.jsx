@@ -48,10 +48,11 @@ const Calendar2 = () => {
     const [newEvent , setNewEvent ] = useState({title:"" , startDate:"",endDate:"",startTime:"",endTime:""});
     const [allEvents , setAllEvents ] = useState(events);
 
-    // console.log("all",allEvents);
+    console.log("all",allEvents);
 
  function handleAddEvent(){
-        setAllEvents([...allEvents , newEvent]);
+     setAllEvents([...allEvents , newEvent]);
+     console.log("new",newEvent)
     }
 
     function handleInputReset(){
@@ -75,14 +76,14 @@ useEffect(() => {
                     <input type={"text"} placeholder={"Add Title"} value={newEvent.title} onChange={(e)=> setNewEvent({...newEvent, title : e.target.value }) }  />
                     <DatePicker  placeholderText='Start Date' selected={newEvent.startDate} onChange={(startDate) => setNewEvent( {...newEvent, startDate }) } />
                     <DatePicker  placeholderText='End Date' selected={newEvent.endDate} onChange={(endDate) => setNewEvent( {...newEvent, endDate }) } />
-                    <input type={"time"}  placeholderText='Start time' value={newEvent.startTime}  onChange={(e) => setNewEvent( {...newEvent, startTime : e.target.startTime }) } />
+                    <input type={"time"}  placeholderText='Start time' value={newEvent.startTime}  onChange={(e) => setNewEvent( {...newEvent, startTime : e.target.value }) } />
                     {/* <input type={"time"}  placeholderText='End time' value={newEvent.startTime}  onChange={(e) => setNewEvent( {...newEvent, startTime : e.target.startTime }) } /> */}
                     <button className='button' onClick={handleAddEvent}>Add Event</button> 
                 </div>
             </div>
             <div className='calendar'>
                 {/* Calendar is imported from react-Big-Calendar */}
-                <Calendar  localizer={localizer} events={allEvents} startAccessor="startDate" endAccessor="endDate" timeAccessor="startTime" />
+                <Calendar  localizer={localizer} events={allEvents} startAccessor="startDate" endAccessor="endDate" />
             </div> 
         </div>
     </div>
