@@ -4,6 +4,8 @@ import { Stack, HStack, VStack, Button,Box, Image } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react'
 import './Navbar.css';
 import{ChevronDownIcon} from '@chakra-ui/icons';
+import {auth} from '../../firebase/Firebase';
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import {
   Modal,
   ModalOverlay,
@@ -27,7 +29,18 @@ export const Navbar = () => {
     }
    
   }
-  
+  const loginWithGoogle = ()=>{
+    console.log('login')
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth,provider)
+  .then((res)=>{
+    console.log(res.user.email);
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+
+  }
   window.addEventListener('scroll',handleScroll);
   return (
     <>
@@ -37,7 +50,7 @@ export const Navbar = () => {
           <ModalHeader textAlign={'center'}>Get started today</ModalHeader>
           <ModalCloseButton onClick={onClose}/>
           <ModalBody>
-           <SignupBox/>
+           <SignupBox loginWithGoogle= {loginWithGoogle}/>
           </ModalBody>
         </ModalContent>
       </Modal>

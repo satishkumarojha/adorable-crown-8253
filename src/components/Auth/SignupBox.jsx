@@ -11,7 +11,7 @@ import {
   } from '@chakra-ui/react';
   import { FcGoogle } from 'react-icons/fc';
   import {BsMicrosoft} from 'react-icons/bs'
-  export default function SignupBox() {
+  export default function SignupBox({loginWithGoogle}) {
     return (
       <Flex
         align={'center'}
@@ -44,6 +44,7 @@ import {
              Get started
             </Button>
             <Button
+            onClick={()=>loginWithGoogle()}
               bg={'white'}
               variant={'outline'}
               colorScheme='blue.900' 
