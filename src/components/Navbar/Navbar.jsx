@@ -34,7 +34,7 @@ export const Navbar = () => {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth,provider)
   .then((res)=>{
-    console.log(res.user.email);
+    console.log(res.user.accessToken);
   })
   .catch((err)=>{
     console.log(err);
@@ -50,7 +50,7 @@ export const Navbar = () => {
           <ModalHeader textAlign={'center'}>Get started today</ModalHeader>
           <ModalCloseButton onClick={onClose}/>
           <ModalBody>
-           <SignupBox loginWithGoogle= {loginWithGoogle}/>
+           <SignupBox loginWithGoogle={loginWithGoogle}/>
           </ModalBody>
         </ModalContent>
       </Modal>

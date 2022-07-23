@@ -44,7 +44,7 @@ import {
              Get started
             </Button>
             <Button
-            onClick={()=>loginWithGoogle()}
+              onClick={()=>loginWithGoogle()}
               bg={'white'}
               variant={'outline'}
               colorScheme='blue.900' 
