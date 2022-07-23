@@ -4,7 +4,6 @@ import {
   Flex,
   Avatar,
   HStack,
-
   IconButton,
   Button,
   Menu,
@@ -23,33 +22,42 @@ import { FaUserAlt } from "react-icons/fa";
 import { ImCreditCard } from "react-icons/im";
 import { AiTwotoneCalendar, AiOutlineAppstore } from "react-icons/ai";
 import { MdPeople } from "react-icons/md";
-import { BsFillLockFill, BsLink45Deg,BsBoxArrowUpRight } from "react-icons/bs";
+import { BsFillLockFill, BsLink45Deg, BsBoxArrowUpRight } from "react-icons/bs";
 import { IoIosLogOut } from "react-icons/io";
-import { MdOutlineKeyboardArrowDown,MdOutlineLiveHelp } from "react-icons/md";
-import {Link} from 'react-router-dom'
+import { MdOutlineKeyboardArrowDown, MdOutlineLiveHelp } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-
-
-
-export default function UserNavbar() {
+export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Box bg={useColorModeValue("white", "gray.900")} px={4} mx={['0rem','10rem','25rem']}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Box
+        bg={useColorModeValue("white", "gray.900")}
+        px={4}
+        mx={"25rem"}
+      >
+        <Flex
+          h={16}
+          justifyContent="space-between"
+          alignItems={"center"}
+          w={["90%", "85%", "80%"]}
+          py={4}
+          maxW="container.lg"
+          mx="auto"
+        >
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-                <Link to={'/'}>
-              <Image
-                size={""}
-                borderRadius="full"
-                boxSize="50px"
-                src={
+              <Link to={"/"}>
+                <Image
+                  size={""}
+                  borderRadius="full"
+                  boxSize="50px"
+                  src={
                     "https://assets.calendly.com/packs/frontend/media/logo-square-cd364a3c33976d32792a.png"
-                }
+                  }
                 />
-                </Link>
+              </Link>
             </Box>
           </HStack>
 
@@ -58,29 +66,43 @@ export default function UserNavbar() {
               as={"nav"}
               marginLeft={"10rem"}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
+              // display={{ base: "none", md: "flex" }}
             >
-                <Link to={'/'}>
-              <Button bg={'none'} fontWeight={"semibold"}>Home</Button>
-                </Link>
-              <Link to={'/availabilty'}>
-              <Button bg={'none'} fontWeight={"semibold"}>Availabilty</Button>
+              <Link to={"/"}>
+                <Button bg={"none"} fontWeight={"semibold"}>
+                  Home
+                </Button>
               </Link>
-              <Button bg={'none'} fontWeight={"semibold"}>Integration</Button>
-              <Button bg={'none'} fontWeight={"semibold"} rightIcon={<MdOutlineKeyboardArrowDown/>}>
+              <Link to={"/availabilty"}>
+                <Button bg={"none"} fontWeight={"semibold"}>
+                  Availabilty
+                </Button>
+              </Link>
+              <Button bg={"none"} fontWeight={"semibold"}>
+                Integration
+              </Button>
+              <Button
+                bg={"none"}
+                fontWeight={"semibold"}
+                rightIcon={<MdOutlineKeyboardArrowDown />}
+              >
                 <Menu>
-                  <MenuButton bg={'none'}  fontWeight={"semibold"}>
+                  <MenuButton bg={"none"} fontWeight={"semibold"}>
                     Help
                   </MenuButton>
                   <MenuList>
                     <MenuItem>
-                    <Box mr={4}>
-                    <BsBoxArrowUpRight/> 
-                    </Box>
-                    Help Center</MenuItem>
+                      <Box mr={4}>
+                        <BsBoxArrowUpRight />
+                      </Box>
+                      Help Center
+                    </MenuItem>
                     <MenuItem>
-                    <Box mr={4}><MdOutlineLiveHelp/></Box>
-                     Chat With Us</MenuItem>
+                      <Box mr={4}>
+                        <MdOutlineLiveHelp />
+                      </Box>
+                      Chat With Us
+                    </MenuItem>
                   </MenuList>
                 </Menu>
               </Button>
@@ -94,9 +116,16 @@ export default function UserNavbar() {
                 minW={0}
               >
                 <Flex marginLeft={8}>
-
-                <Avatar size={"sm"} src={""} />
-                <Box marginLeft={2} > <Button bg={'none'} rightIcon={<MdOutlineKeyboardArrowDown/>}>Account</Button>  </Box>
+                  <Avatar size={"sm"} src={""} />
+                  <Box marginLeft={2}>
+                    {" "}
+                    <Button
+                      bg={"none"}
+                      rightIcon={<MdOutlineKeyboardArrowDown />}
+                    >
+                      Account
+                    </Button>{" "}
+                  </Box>
                 </Flex>
               </MenuButton>
               <MenuList>

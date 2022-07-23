@@ -1,8 +1,9 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 
 const ScheduledEvents = () => {
   return (
-    <div>ScheduledEvents</div>
+    <Box mx={"25rem"}>Scheduled Events</Box>
   )
 }
 

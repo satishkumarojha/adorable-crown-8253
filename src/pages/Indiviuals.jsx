@@ -239,7 +239,7 @@ const Indiviuals = () => {
 
       {/* titile and btn */}
 
-      <Box>
+      <Box className={styles.div7}>
         <Heading className={styles.div7h1}>Try Calendly free</Heading>
         <p className={styles.Smart}>
           After your 14-day trial of our Teams pla, enjoy the Free version of
