@@ -3,6 +3,7 @@ import {
     Stack,
     Flex,
     Box,
+    Input,
     Heading,
     Text,
     Button,
@@ -12,9 +13,47 @@ import {
     createIcon,
     useColorModeValue,
   } from '@chakra-ui/react';
+  import React from 'react'
+
+  import {
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useDisclosure
+  } from '@chakra-ui/react'
+import SignupBox from '../Auth/SignupBox';
   
   export default function Hero() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const finalRef = React.useRef(null);
+    const loginWithGoogle = ()=>{
+      console.log('login')
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth,provider)
+    .then((res)=>{
+      console.log(res.user.accessToken);
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  
+    }
     return (
+      <>
+       <Modal isOpen={isOpen} border={"1px solid red"}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader textAlign={'center'}>Get started today</ModalHeader>
+          <ModalCloseButton onClick={onClose}/>
+          <ModalBody>
+           <SignupBox loginWithGoogle={loginWithGoogle} log={"Login"}/>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
       <Container maxW={'7xl'} py={"60px"}>
         <Stack
           align={'center'}
@@ -53,7 +92,7 @@ import {
                 ahead
               </Text>
             </Heading>
-            <Text color={'gray.500'}fontSize={"1.2em"}>
+            <Text color={'gray.500'}fontSize={"1.7em"}>
             Calendly is your hub for scheduling <br /> meetings professionally 
             and efficiently,<br /> eliminating the hassle of back-and-forth <br />
             emails so you can get back to work.
@@ -61,25 +100,15 @@ import {
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: 'column', sm: 'row' }}>
-              <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                colorScheme={'red'}
-                bg={'red.400'}
-                _hover={{ bg: 'red.500' }}>
-                Get started
-              </Button>
-              <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                How It Works
-              </Button>
+             <Box  position={'relative'}  w={'100%'}>
+            <Input boxShadow={'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;'} focusBorderColor='gray.400' placeholder='Enter your email' h={"4.5em"} w={'70%'} pl={'2em'} borderRadius={'40px'} outline={'none'} />
+            <Button zIndex={3} top={0} right={'22%'} position={'absolute'} colorScheme={'blue'} w={'120px'} h={'100%'} borderRadius={'40px'} onClick={onOpen}>Login</Button>
+            </Box>
+            
             </Stack>
+            <Box color={'#476788'}>
+            <Text fontSize={'1.2em'} fontWeight={'bold'}>Don't have an account?<Text as={'span'} color={'blue.400'}> Sign Up</Text></Text>
+            </Box>
           </Stack>
           <Flex
             flex={1}
@@ -109,6 +138,7 @@ import {
           </Flex>
         </Stack>
       </Container>
+      </>
     );
   }
   
