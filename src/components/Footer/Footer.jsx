@@ -1,94 +1,162 @@
-import React,{useState} from 'react'
-import { Link } from 'react-router-dom';
-import styles from "./Footer.module.css";
-import { SiTwitter,SiInstagram } from "react-icons/si";
-import { FiYoutube } from "react-icons/fi";
-import { FaFacebookF,FaLinkedinIn } from "react-icons/fa";
-
-const Footer = () => {
-
-    const [lang, setLang] = useState("English");
-
-    const onSelect = (e) =>{
-        setLang(e.target.value);
-    }
-
-  return (
-    <div className={styles.MainFooter}>
-        <div className={styles.LeftFooter}>
-             <div>
-                <h1>Easy</h1>
-                <h1 style={{color:"#006bff", marginTop:"-10px" }}>ahead</h1>
-             </div>
-             <div>
-             <p>We take the work out of connecting with others so you can accomplish more.</p>
-             </div>
-             <div>
-             <select value={lang} onChange={onSelect} className={styles.Select}>
-                <option value="English">English</option>
-                <option value="Francais">Francais</option>
-                <option value="Deustch">Deustch</option>
-                <option value="Portagues">Portagues</option>
-             </select>
-             </div>
-             <div style={{display:"flex", gap:"20px", marginBottom:"20px"}}>
-                <div>
-                   <img src="https://assets-marketing-site.calendly.com/static/AppStore-15f01eefb2013206cc7e26d98fbe95fb.svg" alt="apple_logo" style={{cursor:"pointer"}} />                    
-                </div>
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl1ANbjwIzvXX4YpXZT6Nt3TiRUsMlqrZ3xg&usqp=CAU" alt="google_play" width="135px"  style={{borderRadius:"5px",cursor:"pointer"}}/>
-                </div>
-             </div>
-             <div style={{marginTop:"20px"}}>
-               <SiTwitter style={{color:"#0b3558",width:"50px",height:"25px",cursor:"pointer"}}/>
-                <FaFacebookF style={{color:"#0b3558",width:"50px",height:"25px",cursor:"pointer"}}/>
-                <SiInstagram style={{color:"#0b3558",width:"50px",height:"25px",cursor:"pointer"}}/>
-                <FaLinkedinIn style={{color:"#0b3558",width:"50px",height:"25px",cursor:"pointer"}}/>
-                <FiYoutube style={{color:"#0b3558",width:"50px",height:"25px",cursor:"pointer"}}/>
-             </div>
-        </div>
-        <div className={styles.RightFooter}>
-            <div>
-                <h3>About</h3>
-                <Link to="#"><p>About Calendly</p></Link>
-                <Link to="#"><p>Contact Sales</p></Link>
-                <Link to="#"><p>Newsrooms</p></Link>
-                <Link to="#"><p>Careers</p></Link>
-                <Link to="#"><p>Security</p></Link>
-            </div>
-            <div>
-            <h3>Solutions</h3>
-                <Link to="#"><p>Customer Success</p></Link>
-                <Link to="#"><p>Sales</p></Link>
-                <Link to="#"><p>Recruiting</p></Link>
-                <Link to="#"><p>Information Technology</p></Link>
-                <Link to="#"><p>Marketing</p></Link>   
-            </div>
-            <div>
-            <h3>Popular Features</h3>
-                <Link to="#"><p>Embeded Calendly</p></Link>
-                <Link to="#"><p>Availability</p></Link>
-                <Link to="#"><p>Sending Notifications</p></Link>
-                <Link to="#"><p>Using Calendly Mobile</p></Link>   
-            </div>
-            <div>
-            <h3>Support</h3>
-                <Link to="#"><p>Help Center</p></Link>
-                <Link to="#"><p>Video Tutorials</p></Link>
-                <Link to="#"><p>Cookie Settings</p></Link>    
-            </div>
-            <div>
-            <h3>Add-Ons</h3>
-                <Link to="#"><p>Download for Chrome</p></Link>
-                <Link to="#"><p>Download for Firefox</p></Link>    
-            </div>
-            <div>
-            <h3>Developers</h3>
-            <Link to="#"><p>Developer Tools</p></Link>
-            </div>
-        </div>
-    </div>
-  )
-}
-
-export default Footer;
+import {
+    Box,
+    chakra,
+    Container,
+    Heading,
+    Image,
+    Link,
+    Select,
+    SimpleGrid,
+    Stack,
+    Text,
+    useColorModeValue,
+    VisuallyHidden,
+  } from '@chakra-ui/react';
+  import { FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import {FiYoutube} from "react-icons/fi";
+  
+  
+  const ListHeader = ({ children }) => {
+    return (
+      <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+        {children}
+      </Text>
+    );
+  };
+  
+  const SocialButton = ({
+      children,
+      label,
+      href,
+    }) => {
+      return (
+        <chakra.button
+          bg={useColorModeValue('white', 'whiteAlpha.100')}
+          rounded={'full'}
+          w={8}
+          h={8}
+          cursor={'pointer'}
+          as={'a'}
+          href={href}
+          display={'inline-flex'}
+          alignItems={'center'}
+          justifyContent={'center'}
+          transition={'background 0.3s ease'}
+          _hover={{
+            color: useColorModeValue('blackAlpha.500', 'whiteAlpha.200'),
+          }}>
+          <VisuallyHidden>{label}</VisuallyHidden>
+          {children}
+        </chakra.button>
+      );
+    };
+  
+  export default function Footer() {
+    return (
+      <Box
+        bg={useColorModeValue('white', 'white')}
+        color={useColorModeValue('gray.700', 'gray.200')}
+        >
+        <Container as={Stack} 
+        maxW={'7xl'} 
+        py={10}
+        margin={"auto"}
+        marginTop={"70px"}>
+          <SimpleGrid
+            templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
+            spacing={8}
+            marginLeft={"30px"}>
+            <Stack spacing={6} gap={10}>
+              <Box textAlign={"left"} marginBottom={"10px"}>
+                <Heading>Easy</Heading>
+                <Heading color={"blue.500"}>ahead</Heading>
+                <Text fontSize="lg" marginTop={"20px"} width={"130%"}>
+                We take the work out of connecting with others so you can accomplish more.
+                </Text>
+              </Box>
+              <Stack direction={'row'} marginBottom={"20px"}>
+                <Select
+                  placeholder={'English'}
+                  width={250}
+                  bg={useColorModeValue('white', 'whiteAlpha.100')}
+                  border={"1px solid black"}
+                  _focus={{
+                    bg: 'whiteAlpha.300',
+                  }}
+                >
+                  <option value='Francis'>Francis</option>
+                  <option value='Protegue'>Protegue</option>
+                </Select>
+              </Stack>
+              <Stack direction={'row'} spacing={6} marginBottom={"20px"}>
+                <Image src='https://assets-marketing-site.calendly.com/static/AppStore-15f01eefb2013206cc7e26d98fbe95fb.svg' style={{cursor:"pointer"}}/>
+                <Image src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl1ANbjwIzvXX4YpXZT6Nt3TiRUsMlqrZ3xg&usqp=CAU' width="135px"  style={{borderRadius:"5px",cursor:"pointer"}}/>
+              </Stack>
+              <Stack direction={'row'} spacing={6} marginBottom={"10px"}>
+                <SocialButton label={'Twitter'} href={'#'}>
+                  <FaTwitter />
+                </SocialButton>
+                <SocialButton label={'YouTube'} href={'#'}>
+                  <FaYoutube />
+                </SocialButton>
+                <SocialButton label={'Instagram'} href={'#'}>
+                  <FaInstagram />
+                </SocialButton>
+                <SocialButton label={'Instagram'} href={'#'}>
+                  <FaLinkedinIn />
+                </SocialButton>
+                <SocialButton label={'Instagram'} href={'#'}>
+                  <FiYoutube />
+                </SocialButton>
+              </Stack>
+            </Stack>
+            <SimpleGrid
+             width={700} 
+             marginLeft = {150}
+             columns={3} 
+             spacing={"16"}
+             >
+            <Stack align={'flex-start'} gap={3}>
+              <ListHeader><Heading size={"md"} fontFamily={"revert-layer"}>About</Heading></ListHeader>
+              <Link href={'#'}>About Calendly</Link>
+              <Link href={'#'}>Contact Sales</Link>
+              <Link href={'#'}>Newsrooms</Link>
+              <Link href={'#'}>Careers</Link>
+              <Link href={'#'}>Security</Link>
+            </Stack>
+            <Stack align={'flex-start'} gap={3}>
+              <ListHeader><Heading size={"md"}>Solutions</Heading></ListHeader>
+              <Link href={'#'}>Customer Success</Link>
+              <Link href={'#'}>Sales</Link>
+              <Link href={'#'}>Recruiting</Link>
+              <Link href={'#'}>Information Technology</Link>
+              <Link href={'#'}>Marketing</Link>
+            </Stack>
+            <Stack align={'flex-start'} gap={3}>
+              <ListHeader><Heading size={"md"}>Popular Features</Heading></ListHeader>
+              <Link href={'#'}>Embeded Calendly</Link>
+              <Link href={'#'}>Availability</Link>
+              <Link href={'#'}>Sending Notifications</Link>
+              <Link href={'#'}>Using Calendly Mobile</Link>
+            </Stack>
+            <Stack align={'flex-start'} gap={3}>
+              <ListHeader><Heading size={"md"}>Support</Heading></ListHeader>
+              <Link href={'#'}>Help Center</Link>
+              <Link href={'#'}>Video Tutorials</Link>
+              <Link href={'#'}>Cookies Settings</Link>
+            </Stack>
+            <Stack align={'flex-start'} gap={3}>
+              <ListHeader><Heading size={"md"}>Add-Ons</Heading></ListHeader>
+              <Link href={'#'}>Download for Chrome</Link>
+              <Link href={'#'}>Download for FireFox</Link>
+            </Stack>
+            <Stack align={'flex-start'} gap={3}>
+              <ListHeader><Heading size={"md"}>Developers</Heading></ListHeader>
+              <Link href={'#'}>Developer Tools</Link>
+            </Stack>
+            </SimpleGrid>
+          </SimpleGrid>
+        </Container>
+      </Box>
+    );
+  }
