@@ -22,7 +22,7 @@ export const Home = () => {
     <OnDemand/>
     <MobileBar/>
     <TryCalendly/>
-    {/* <Footer/> */}
+    
     </>
   )
 }

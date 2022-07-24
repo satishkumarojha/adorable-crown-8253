@@ -26,7 +26,8 @@ import {
     useDisclosure
   } from '@chakra-ui/react'
 import SignupBox from '../Auth/SignupBox';
-  
+import { auth } from "../../firebase/Firebase";
+
   export default function Hero() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null);

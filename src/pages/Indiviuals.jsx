@@ -8,7 +8,7 @@ import video from "../images/videomet1.mp4";
 
 const Indiviuals = () => {
   return (
-    <Box>
+    <Box mt={104.5}>
       <Box className={styles.div1}>
         <Box className={styles.div2}>
           <Heading size='3xl'className={styles.h1size}>
