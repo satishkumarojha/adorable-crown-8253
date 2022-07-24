@@ -37,6 +37,8 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 import SignupBox from "../Auth/SignupBox";
+import Product from "../Product/Product";
+import Resources from "../Resources/Resources";
 export const Navbar = ({handleLog}) => {
   const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -176,9 +178,9 @@ export const Navbar = ({handleLog}) => {
           </Text>
           </Link>
           <Link to='/product'>
-          <Text fontSize="1rem" fontWeight="700" _hover={{ color: "#006BFF" }}>
-            Product
-            <ChevronDownIcon display={{ base: "none", lg: "inline" }} />
+          <Text fontSize={"1rem"} >
+            <Product/>
+            {/* <ChevronDownIcon display={{ base: "none", lg: "inline" }} /> */}
           </Text>
           </Link>
           <Link to='/pricing'>
@@ -187,9 +189,9 @@ export const Navbar = ({handleLog}) => {
           </Text>
           </Link>
           <Link to='/resources'>
-          <Text fontSize="1rem" fontWeight="700" _hover={{ color: "#006BFF" }}>
-            Resources
-            <ChevronDownIcon display={{ base: "none", lg: "inline" }} />
+          <Text >
+            <Resources/>
+            {/* <ChevronDownIcon display={{ base: "none", lg: "inline" }} /> */}
           </Text>
           </Link>
         </HStack>
