@@ -26,10 +26,11 @@ import { BsFillLockFill, BsLink45Deg, BsBoxArrowUpRight } from "react-icons/bs";
 import { IoIosLogOut } from "react-icons/io";
 import { MdOutlineKeyboardArrowDown, MdOutlineLiveHelp } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export  function Navbar({handleLog}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+const navigate = useNavigate();
   return (
     <>
       <Box
@@ -68,12 +69,12 @@ export default function Navbar() {
               spacing={4}
               // display={{ base: "none", md: "flex" }}
             >
-              <Link to={"/"}>
+              <Link to={"/userevent/userhome"}>
                 <Button bg={"none"} fontWeight={"semibold"}>
                   Home
                 </Button>
               </Link>
-              <Link to={"/availabilty"}>
+              <Link to={"/userevent/userhome/availability"}>
                 <Button bg={"none"} fontWeight={"semibold"}>
                   Availabilty
                 </Button>
@@ -176,7 +177,10 @@ export default function Navbar() {
                 </MenuItem>
 
                 <MenuDivider />
-                <MenuItem>
+                <MenuItem onClick={()=>{
+                  handleLog();
+                  navigate('/');
+                }}>
                   <Box marginRight={3}>
                     <IoIosLogOut size={18} />
                   </Box>

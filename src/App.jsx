@@ -1,24 +1,23 @@
+import { useState } from 'react'
 import './App.css'
-import Calendar2 from './components/Calendar/Calendar2'
-// import Calendar_ui from './components/Calendar/Calendar_ui'
 import { Navbar} from './components/Navbar/Navbar'
- 
 import {Home} from './pages/Home'
-import  Login  from './pages/Login'
-import Password from './pages/Password'
+import { MainRoutes } from './pages/MainRoutes'
 import UserDashboard from './pages/UserDashboard'
-import Footer from './components/Footer/Footer';
+import { Dashboard } from './components/User Dashboard/Dashboard'
+import {Navbar as UserNavbar} from './components/User Dashboard/UserNavbar'
+import Footer from './components/Footer/Footer'
 function App() {
-
+  const[log,setLog]= useState(false);
+  const handleLog=()=>{
+    setLog(!log);
+  }
   return (
     <div className="App">
-{/* <UserDashboard/> */}
-   <Navbar/>
-   <Home/>
+   {log?<UserNavbar handleLog={handleLog}/>:<Navbar handleLog={handleLog}/>}
+   {log?<Dashboard/>:null}
+   <MainRoutes/>
    <Footer/>
-   {/* <Login/> */}
-   {/* <Password/> */}
-   {/* <Calendar2/> */}
     </div>
   )
 }

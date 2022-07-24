@@ -10,6 +10,7 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
+import {Link} from 'react-router-dom'
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiSettings2Fill } from "react-icons/ri";
@@ -34,9 +35,11 @@ const EventTypes = () => {
           </Heading>
         </Flex>
         <Flex>
-          <Button color={"blue.500"} rounded={"full"} borderColor={'blue.500'} variant={"outline"}>
+          <Link to={'/userevent/userhome/eventforms'}>
+          <Button color={"blue.500"} rounded={"full"} borderColor={'blue.500'} variant={"outline"} >
             + New Event Type
           </Button>
+          </Link>
           <Menu>
             <MenuButton as={Button} border={"none"} bg={"none"}>
               <RiSettings2Fill />

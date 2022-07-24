@@ -1,15 +1,14 @@
 import React from "react";
-import UserRoutes from "./../../pages/UserRoutes";
-import Dashboard from "./Dashboard";
+// import {UserRoutes} from "./../../pages/UserRoutes";
+import {Dashboard} from "./Dashboard";
 
 
-const Home = () => {
+export const Home = () => {
   return (
     <div>
-      <Dashboard />
-      <UserRoutes />
+      {/* <Dashboard /> */}
+      {/* <UserRoutes /> */}
     </div>
   );
 };
 
-export default Home;

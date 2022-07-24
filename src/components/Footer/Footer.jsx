@@ -70,7 +70,7 @@ import {
               <Box textAlign={"left"} marginBottom={"10px"}>
                 <Heading>Easy</Heading>
                 <Heading color={"blue.500"}>ahead</Heading>
-                <Text fontSize="lg" marginTop={"20px"} width={"130%"}>
+                <Text fontSize={{base:"lg",sm:"md"}} marginTop={"20px"} width={{base:"130%",sm:"70%"}}>
                 We take the work out of connecting with others so you can accomplish more.
                 </Text>
               </Box>
@@ -113,7 +113,7 @@ import {
             <SimpleGrid
              width={700} 
              marginLeft = {150}
-             columns={3} 
+             columns={{ base: 1, sm: 2, md: 3 }}
              spacing={"16"}
              >
             <Stack align={'flex-start'} gap={3}>

@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
-export default function Dashboard() {
+export  function Dashboard() {
   return (
     <>
       <Box
@@ -75,22 +75,22 @@ export default function Dashboard() {
               // display={{ base: "none", md: "flex" }}
               
             >
-              <Link to={"/"}>
+              <Link to={"/userevent/userhome/eventtype"}>
                 <Button bg={"none"} fontWeight={"semibold"}>
                   Event Types
                 </Button>
               </Link>
-              <Link to={"/scheduled_events"}>
+              <Link to={"/userevent/userhome/scheduledevents"}>
                 <Button bg={"none"} fontWeight={"semibold"}>
                   Scheduled Events
                 </Button>
               </Link>
-              <Link to={"/workflows"}>
+              <Link to={"/userevent/userhome/workflows"}>
                 <Button bg={"none"} fontWeight={"semibold"}>
                   Workflows
                 </Button>
               </Link>
-              <Link to={"/routing_forms"}>
+              <Link to={"/userevent/userhome/routingforms"}>
                 <Button bg={"none"} fontWeight={"semibold"}>
                   Routing Forms
                 </Button>
@@ -98,6 +98,7 @@ export default function Dashboard() {
             </HStack>
           </VStack>
           <Flex alignItems={"center"}>
+            <Link to={'/userevent/userhome/eventforms'}>
             <Button
               variant={"solid"}
               bg={"#3372cc"}
@@ -106,9 +107,10 @@ export default function Dashboard() {
               mr={4}
               leftIcon={<AddIcon />}
               borderRadius={50}
-            >
+              >
               Create
             </Button>
+              </Link>
           </Flex>
         </Flex>
       </Box>
