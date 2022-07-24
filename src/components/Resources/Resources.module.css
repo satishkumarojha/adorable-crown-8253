@@ -1,0 +1,45 @@
+.gridmargin{
+    margin-top: -5px;
+    font-size: larger;
+    font-weight: 600;
+}
+.gridmargin:hover{
+    color: #006bff;
+}
+.gridmarginP{
+    margin-top: 18px;
+    font-size: 18px;
+}
+.toph4{
+    font-size: 25px;
+}
+.toph4:hover{
+    color: #006bff;
+}
+.topP{
+    margin-top: -10px;
+    font-size: 20px;
+}
+.bottomh1{
+    font-size: large;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.bottomh1:hover{
+    color: #006bff;
+}
+.color1{
+    font-size: larger;
+   color: #006bff;
+}
+.spanfirst{
+    margin-top:20px;
+}
+.bgcolour{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgb(227, 233, 249);
+}
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

@@ -1,0 +1,53 @@
+.gridmargin{
+    margin-top: -5px;
+    font-size: larger;
+    font-weight: bold;
+}
+.gridmarginlast{
+    margin-bottom: 15px;
+    font-size: larger;
+    font-weight: bold;
+}
+.gridmarginlast:hover{
+    color: #006bff;
+}
+.gridmargin:hover{
+    color: #006bff;
+}
+.gridmarginP{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.toph4{
+    font-size: 25px;
+}
+.toph4:hover{
+    color: #006bff;
+}
+.topP{
+    /* border: 1px solid red; */
+   margin-top: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.color1{
+    font-size: larger;
+   color: #006bff;
+}
+.spanfirst{
+    margin-top:20px;
+}
+.bgcolour{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgb(227, 233, 249);
+}
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.flex{
+    margin-top: 20px;
+    display: flex;
+    color: #006bff;
+
+}
