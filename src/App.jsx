@@ -17,7 +17,9 @@ function App() {
    {log?<UserNavbar handleLog={handleLog}/>:<Navbar handleLog={handleLog}/>}
    {log?<Dashboard/>:null}
    <MainRoutes/>
-   <Footer/>
+
+   {!log?<Footer/>:null}
+   
     </div>
   )
 }

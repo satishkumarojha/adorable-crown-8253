@@ -12,12 +12,14 @@ import RoutingForms from '../components/User Dashboard/RoutingForms';
 import Workflows from '../components/User Dashboard/Workflows';
 import EventForm from '../components/User Dashboard/EventForm';
 import Availablity from '../components/User Dashboard/UserAvailablity';
+import Teams from "../pages/Teams"
 export const MainRoutes = () => {
   return (
     <div>
    <Routes>
      <Route path='/' element={<Home/>}/>
      <Route path='/individuals' element={<Individuals/>}/>
+     <Route path='/teams' element={<Teams/>}/>
      <Route path='/customer' element={<Customers/>}/>
      <Route path='/userevent/userhome' element={<UserHome/>}/>
      <Route path='/userevent/userhome/eventtype' element={<EventTypes/>}/>
