@@ -11,7 +11,7 @@ function App() {
     <div className="App">
 {/* <UserDashboard/> */}
    <Navbar/>
-   {/* <Home/> */}
+   <Home/> 
    {/* <Login/> */}
    {/* <Password/> */}
     </div>
